@@ -13,7 +13,7 @@ function Login() {
     setIsPopupOpen((prev) => !prev); // Garante que a atualização seja baseada no estado anterior
   };
 
-  const handleFotoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  /*   const handleFotoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       const reader = new FileReader();
@@ -22,7 +22,7 @@ function Login() {
       };
       reader.readAsDataURL(file);
     }
-  };
+  }; */
 
   const handleSubmitCadastro = (e: React.FormEvent) => {
     e.preventDefault();
@@ -132,7 +132,10 @@ function Login() {
               style={{ backgroundColor: "#fee5ca" }} // Cor de fundo alterada
             >
               <h2 className="text-2xl font-bold mb-4">Cadastre-se</h2>
-              <form className="flex flex-col gap-4" onSubmit={handleSubmitCadastro}>
+              <form
+                className="flex flex-col gap-4"
+                onSubmit={handleSubmitCadastro}
+              >
                 <div className="flex flex-col">
                   <label htmlFor="nome" className="mb-2 text-lg">
                     Nome
@@ -219,8 +222,12 @@ function Login() {
                   type="submit"
                   className="rounded-lg flex justify-center text-white w-full py-2 transition-colors duration-200"
                   style={{ backgroundColor: "#b00e2f" }} // Cor normal
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#8a0b24"} // Cor hover
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#b00e2f"} // Volta à cor normal
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.backgroundColor = "#8a0b24")
+                  } // Cor hover
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.backgroundColor = "#b00e2f")
+                  } // Volta à cor normal
                 >
                   <span>Cadastrar</span>
                 </button>
