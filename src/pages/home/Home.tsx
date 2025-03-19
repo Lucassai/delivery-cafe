@@ -80,7 +80,6 @@ function Home() {
             </p>
           </div>
         </ParallaxLayer>
-
         <ParallaxLayer offset={5} speed={0.5}>
           <Footer />
         </ParallaxLayer>
